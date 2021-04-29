@@ -34,6 +34,9 @@ The Take Repository Bot Gateway is an API that returns information from some Tak
 ### testing the application
  > Access the swagger: http://localhost:8080/swagger-ui.html#/swaggertake-repository-bot-gateway/repository
  
+ <p align="center">
+  <img src="https://github.com/JoaoVictorfss/take-repository-bot-gateway/blob/master/swagger.png"/>
+ </p>
  <p>
   response example: 
  
