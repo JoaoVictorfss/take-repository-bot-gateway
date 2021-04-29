@@ -1,0 +1,6 @@
+server:
+  domain: take-repository-bot-gateway
+
+github:
+  domain: https://api.github.com
+  partional: 5
