@@ -23,7 +23,8 @@ The Take Repository Bot Gateway is an API that returns information from some Tak
   - Java 8
 
 ### Running
- ``` $ git clone https://github.com/JoaoVictorfss/take-repository-bot-gateway.git
+ ``` 
+     $ git clone https://github.com/JoaoVictorfss/take-repository-bot-gateway.git
      $ cd take-repository-bot-gateway/takeRepositoryBotGateway
      $ mvn clean install
      $ mvn clean package
