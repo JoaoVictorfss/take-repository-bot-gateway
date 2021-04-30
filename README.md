@@ -13,7 +13,7 @@
 
 ## Description:star:
 <p align="justify">
-The Take Repository Bot Gateway is an API that returns information from some Take repositories on Github to a chatboot, through an integration with the public Github API.
+The Take Repository Bot Gateway is an API that returns information from some Take repositories on Github to a chatbot, through an integration with the public Github API.
 </p>
 
 ## Dependencies
