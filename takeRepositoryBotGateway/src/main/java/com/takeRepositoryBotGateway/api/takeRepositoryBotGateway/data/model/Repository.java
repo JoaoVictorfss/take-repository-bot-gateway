@@ -3,7 +3,7 @@ package com.takeRepositoryBotGateway.api.takeRepositoryBotGateway.data.model;
 import lombok.Data;
 
 @Data
-public class RepositoryDto {
+public class Repository {
     private String image;
     private String title;
     private String subTitle;

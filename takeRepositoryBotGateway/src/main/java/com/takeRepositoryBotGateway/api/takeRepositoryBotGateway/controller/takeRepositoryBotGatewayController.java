@@ -1,8 +1,8 @@
 package com.takeRepositoryBotGateway.api.takeRepositoryBotGateway.controller;
 
-import com.takeRepositoryBotGateway.api.takeRepositoryBotGateway.data.constants.PathConstants;
+import static com.takeRepositoryBotGateway.api.takeRepositoryBotGateway.data.constants.PathConstants.*;
 import com.takeRepositoryBotGateway.api.takeRepositoryBotGateway.data.model.GihubRepository;
-import com.takeRepositoryBotGateway.api.takeRepositoryBotGateway.data.model.RepositoryDto;
+import com.takeRepositoryBotGateway.api.takeRepositoryBotGateway.data.model.Repository;
 import com.takeRepositoryBotGateway.api.takeRepositoryBotGateway.data.model.Response;
 import com.takeRepositoryBotGateway.api.takeRepositoryBotGateway.integration.GithubApi;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,13 +24,12 @@ public class takeRepositoryBotGatewayController {
     @Autowired
     GithubApi githubApiClient;
 
-    @GetMapping(value = PathConstants.REPOSITORY_PATH)
+    @GetMapping(value = REPOSITORY_PATH)
     public Response getFiveTakeRepositories() {
         LOG.info("try searching repositories");
 
         try{
             List<GihubRepository> repositoriesFromGH = this.githubApiClient.findRepositories();
-
             repositoriesFromGH = repositoriesFromGH
                     .stream()
                     .filter(repository -> repository.getLanguage() != null && repository.getLanguage().equalsIgnoreCase("C#"))
@@ -51,17 +50,16 @@ public class takeRepositoryBotGatewayController {
 
     private Response makeResponse(List<GihubRepository> repositories) {
         Response response = new Response();
-        List<RepositoryDto> mappedRepositories = new ArrayList<>();
+        List<Repository> mappedRepositories = new ArrayList<>();
 
-        repositories.sort(Comparator.comparing(GihubRepository::getCreated_at));
-
+        repositories.sort(Comparator.comparing(GihubRepository::getCreatedAt));
         repositories.forEach((repository) -> {
-            RepositoryDto newRepositoryResponse = new RepositoryDto();
+            Repository newRepository= new Repository();
 
-            newRepositoryResponse.setTitle(repository.getFull_name());
-            newRepositoryResponse.setSubTitle(repository.getDescription());
-            newRepositoryResponse.setImage(repository.getOwner().getAvatar_url());
-            mappedRepositories.add(newRepositoryResponse);
+            newRepository.setTitle(repository.getFullName());
+            newRepository.setSubTitle(repository.getDescription());
+            newRepository.setImage(repository.getOwner().getAvatarUrl());
+            mappedRepositories.add(newRepository);
         });
         response.setData(mappedRepositories);
 

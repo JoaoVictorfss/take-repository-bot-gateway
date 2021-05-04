@@ -17,17 +17,17 @@ public class GihubRepository {
 
     public void setId(Integer id) { this.id = id; }
 
-    public String getFull_name() { return full_name; }
+    public String getFullName() { return full_name; }
 
-    public void setFull_name(String full_name) { this.full_name = full_name; }
+    public void setFullName(String full_name) { this.full_name = full_name; }
 
     public String getDescription() { return description; }
 
     public void setDescription(String description) { this.description = description; }
 
-    public Date getCreated_at() { return created_at; }
+    public Date getCreatedAt() { return created_at; }
 
-    public void setCreated_at(Date created_at) { this.created_at = created_at; }
+    public void setCreatedAt(Date created_at) { this.created_at = created_at; }
 
     public OwnerInfo getOwner() { return owner; }
 
