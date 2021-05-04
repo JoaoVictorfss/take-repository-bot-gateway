@@ -13,7 +13,7 @@
 
 ## Description:star:
 <p align="justify">
-The Take Repository Bot Gateway is an API that returns information from some Take repositories on Github to a chatboot, through an integration with the public Github API.
+The Take Repository Bot Gateway is an API that returns information from some Take repositories on Github to a chatbot, through an integration with the public Github API.
 </p>
 
 ## Dependencies
@@ -23,7 +23,8 @@ The Take Repository Bot Gateway is an API that returns information from some Tak
   - Java 8
 
 ### Running
- ``` $ git clone https://github.com/JoaoVictorfss/take-repository-bot-gateway.git
+ ``` 
+     $ git clone https://github.com/JoaoVictorfss/take-repository-bot-gateway.git
      $ cd take-repository-bot-gateway/takeRepositoryBotGateway
      $ mvn clean install
      $ mvn clean package
@@ -31,9 +32,12 @@ The Take Repository Bot Gateway is an API that returns information from some Tak
  ```
  > Access the url in the browser: http://localhost:8080/take-repository-bot-gateway/repository
 
-### testing the application
+### Testing the application
  > Access the swagger: http://localhost:8080/swagger-ui.html#/swaggertake-repository-bot-gateway/repository
  
+ <p align="center">
+  <img src="https://github.com/JoaoVictorfss/take-repository-bot-gateway/blob/master/swagger.png"/>
+ </p>
  <p>
   response example: 
  

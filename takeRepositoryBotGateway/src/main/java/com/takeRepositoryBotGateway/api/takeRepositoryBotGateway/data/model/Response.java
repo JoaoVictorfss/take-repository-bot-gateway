@@ -1,9 +1,7 @@
 package com.takeRepositoryBotGateway.api.takeRepositoryBotGateway.data.model;
 
-
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class Response {
     private List<Repository> data;
