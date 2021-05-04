@@ -53,14 +53,14 @@ public class takeRepositoryBotGatewayController {
         Response response = new Response();
         List<RepositoryDto> mappedRepositories = new ArrayList<>();
 
-        repositories.sort(Comparator.comparing(GihubRepository::getCreated_at));
+        repositories.sort(Comparator.comparing(GihubRepository::getCreatedAt));
 
         repositories.forEach((repository) -> {
-            RepositoryDto newRepositoryResponse = new RepositoryDto();
+            RepositoryDto newRepositoryResponse = new Repository();
 
-            newRepositoryResponse.setTitle(repository.getFull_name());
+            newRepositoryResponse.setTitle(repository.getFullName());
             newRepositoryResponse.setSubTitle(repository.getDescription());
-            newRepositoryResponse.setImage(repository.getOwner().getAvatar_url());
+            newRepositoryResponse.setImage(repository.getOwner().getAvatarUrl());
             mappedRepositories.add(newRepositoryResponse);
         });
         response.setData(mappedRepositories);
