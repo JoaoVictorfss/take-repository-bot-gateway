@@ -13,8 +13,7 @@
 
 ## Description:star:
 <p align="justify">
-The Take Repository Bot Gateway is an API that returns information from some Take repositories on Github to a chatbot, through an integration with the public Github API.
-</p>
+The Take Repository Bot Gateway is an API that returns information from some Take repositories on Github to a chatbot, through an integration with the public Github API, unsing Spring Cloud OpenFeign.
 
 ## Dependencies
   - Swagger
