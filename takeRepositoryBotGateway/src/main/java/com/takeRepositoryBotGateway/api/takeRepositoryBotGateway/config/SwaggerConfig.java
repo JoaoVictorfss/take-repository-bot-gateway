@@ -23,7 +23,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("Take Repository Bot Gateway")
-                .description("Api that returns information from Take's C # repositories on github for a chatboot.").version("1.0")
+                .description("Api that returns information from Take's C # repositories on github for a chatbot.").version("1.0")
                 .build();
     }
 }

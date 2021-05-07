@@ -12,7 +12,7 @@
 	<artifactId>takeRepositoryBotGateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>takeRepositoryBotGateway</name>
-	<description>api that returns information from Take's C # repositories on github for a chatboot.</description>
+	<description>api that returns information from Take's C # repositories on github for a chatbot.</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>2020.0.2</spring-cloud.version>

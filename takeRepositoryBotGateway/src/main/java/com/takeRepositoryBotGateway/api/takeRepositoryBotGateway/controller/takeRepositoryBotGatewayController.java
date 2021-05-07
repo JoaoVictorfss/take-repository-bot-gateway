@@ -36,7 +36,6 @@ public class takeRepositoryBotGatewayController {
                     .collect(Collectors.toList());
 
             LOG.info("Data found: {}", repositoriesFromGH);
-
             return makeResponse(repositoriesFromGH);
         }catch (Exception e){
             LOG.info("Error when searching repositories");
@@ -52,13 +51,14 @@ public class takeRepositoryBotGatewayController {
         Response response = new Response();
         List<Repository> mappedRepositories = new ArrayList<>();
 
-        repositories.sort(Comparator.comparing(GihubRepository::getCreatedAt));
+        repositories.sort(Comparator.comparing(GihubRepository::getCreated_at));
         repositories.forEach((repository) -> {
-            Repository newRepository= new Repository();
+            Repository newRepository= Repository.builder()
+                    .title(repository.getFull_name())
+                    .subTitle(repository.getDescription())
+                    .image(repository.getOwner().getAvatar_url())
+                    .build();
 
-            newRepository.setTitle(repository.getFullName());
-            newRepository.setSubTitle(repository.getDescription());
-            newRepository.setImage(repository.getOwner().getAvatarUrl());
             mappedRepositories.add(newRepository);
         });
         response.setData(mappedRepositories);
